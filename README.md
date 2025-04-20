@@ -38,10 +38,6 @@ MyProject/ ├── src/ # Source files ├── include/ # Header files ├�
 
 ~/Documents/Pigeon-App/assets/ ├── c++_console/ ├── wxwidgets/ └── OpenGL/
 
-yaml
-Copy
-Edit
-
 5. For C++ Console and wxWidgets:
    - Only specific template files (`main.cpp.template`, `CMakeLists.txt.template`, etc.) are copied.
 6. For OpenGL:
