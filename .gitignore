@@ -1,7 +1,17 @@
+# Build folders
+/build/
+/.cache/
+
+# CMake generated
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
 # Prerequisites
 *.d
 
-# Compiled Object files
+# Object files
 *.slo
 *.lo
 *.o
@@ -11,22 +21,29 @@
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
+# Static libs
 *.lai
 *.la
 *.a
 *.lib
 
+# Dynamic libs
+*.so
+*.dylib
+*.dll
+
 # Executables
 *.exe
 *.out
 *.app
+
+# Fortran
+*.mod
+*.smod
+
+# wxWidgets (optional)
+*.rc
+*.res
+
+# macOS
+.DS_Store
