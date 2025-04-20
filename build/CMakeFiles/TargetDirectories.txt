@@ -1,0 +1,3 @@
+/home/lighht19/Documents/Pigeon-App/build/CMakeFiles/ProjectMaker.dir
+/home/lighht19/Documents/Pigeon-App/build/CMakeFiles/edit_cache.dir
+/home/lighht19/Documents/Pigeon-App/build/CMakeFiles/rebuild_cache.dir

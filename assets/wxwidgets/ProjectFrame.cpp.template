@@ -1,0 +1,21 @@
+#include "ProjectFrame.h"
+
+wxBEGIN_EVENT_TABLE(ProjectFrame, wxFrame)
+    EVT_MENU(wxID_EXIT, ProjectFrame::OnQuit)
+wxEND_EVENT_TABLE()
+
+ProjectFrame::ProjectFrame(const wxString& title)
+    : wxFrame(nullptr, wxID_ANY, title, wxDefaultPosition, wxSize(800, 600))
+{
+    // Basic menu with “Quit”
+    wxMenuBar* menuBar = new wxMenuBar;
+    wxMenu* fileMenu  = new wxMenu;
+    fileMenu->Append(wxID_EXIT, "&Quit\tCtrl-Q");
+    menuBar->Append(fileMenu, "&File");
+    SetMenuBar(menuBar);
+}
+
+void ProjectFrame::OnQuit(wxCommandEvent&)
+{
+    Close(true);
+}

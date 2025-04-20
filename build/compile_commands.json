@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/lighht19/Documents/Pigeon-App/build",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__ -I/home/lighht19/Documents/Pigeon-App/include -isystem /usr/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2 -std=gnu++17 -o CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o -c /home/lighht19/Documents/Pigeon-App/src/ProjectPigeonFrame.cpp",
+  "file": "/home/lighht19/Documents/Pigeon-App/src/ProjectPigeonFrame.cpp",
+  "output": "CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o"
+},
+{
+  "directory": "/home/lighht19/Documents/Pigeon-App/build",
+  "command": "/usr/bin/c++ -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK3__ -D__WXGTK__ -I/home/lighht19/Documents/Pigeon-App/include -isystem /usr/lib/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2 -std=gnu++17 -o CMakeFiles/ProjectMaker.dir/src/main.cpp.o -c /home/lighht19/Documents/Pigeon-App/src/main.cpp",
+  "file": "/home/lighht19/Documents/Pigeon-App/src/main.cpp",
+  "output": "CMakeFiles/ProjectMaker.dir/src/main.cpp.o"
+}
+]

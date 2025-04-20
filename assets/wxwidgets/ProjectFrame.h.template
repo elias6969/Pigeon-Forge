@@ -1,0 +1,14 @@
+#pragma once
+#include <wx/wx.h>
+
+class ProjectFrame : public wxFrame
+{
+public:
+    explicit ProjectFrame(const wxString& title);
+
+private:
+    // Add your widgets / event handlers here
+    void OnQuit(wxCommandEvent& event);
+
+    wxDECLARE_EVENT_TABLE();
+};
