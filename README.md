@@ -24,12 +24,8 @@ Ideal for quickly setting up new projects with CMake and common directory layout
 
 ## 📦 Project Structure
 
-Your generated project will look like this:
+Your generated project will look like this: 
 MyProject/ ├── src/ # Source files ├── include/ # Header files ├── assets/ # Placeholder for assets (images, sounds, etc.) ├── build/ # Out-of-source build dir ├── .cache/ # Internal cache if needed ├── CMakeLists.txt # Auto-generated or copied from template └── main.cpp # Based on the selected project type
-
-yaml
-Copy
-Edit
 
 ---
 
