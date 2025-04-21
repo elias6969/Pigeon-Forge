@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ProjectMaker.dir/link.d"
+  "CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o"
+  "CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o.d"
   "CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o"
   "CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o.d"
   "CMakeFiles/ProjectMaker.dir/src/main.cpp.o"

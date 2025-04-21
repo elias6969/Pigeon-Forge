@@ -72,10 +72,24 @@ include CMakeFiles/ProjectMaker.dir/flags.make
 CMakeFiles/ProjectMaker.dir/codegen:
 .PHONY : CMakeFiles/ProjectMaker.dir/codegen
 
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o: CMakeFiles/ProjectMaker.dir/flags.make
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o: /home/lighht19/Documents/Pigeon-App/src/PathManager.cpp
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o: CMakeFiles/ProjectMaker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o -MF CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o.d -o CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o -c /home/lighht19/Documents/Pigeon-App/src/PathManager.cpp
+
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lighht19/Documents/Pigeon-App/src/PathManager.cpp > CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.i
+
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lighht19/Documents/Pigeon-App/src/PathManager.cpp -o CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.s
+
 CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o: CMakeFiles/ProjectMaker.dir/flags.make
 CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o: /home/lighht19/Documents/Pigeon-App/src/ProjectPigeonFrame.cpp
 CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o: CMakeFiles/ProjectMaker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o -MF CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o.d -o CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o -c /home/lighht19/Documents/Pigeon-App/src/ProjectPigeonFrame.cpp
 
 CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.s: cmake_force
 CMakeFiles/ProjectMaker.dir/src/main.cpp.o: CMakeFiles/ProjectMaker.dir/flags.make
 CMakeFiles/ProjectMaker.dir/src/main.cpp.o: /home/lighht19/Documents/Pigeon-App/src/main.cpp
 CMakeFiles/ProjectMaker.dir/src/main.cpp.o: CMakeFiles/ProjectMaker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ProjectMaker.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ProjectMaker.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ProjectMaker.dir/src/main.cpp.o -MF CMakeFiles/ProjectMaker.dir/src/main.cpp.o.d -o CMakeFiles/ProjectMaker.dir/src/main.cpp.o -c /home/lighht19/Documents/Pigeon-App/src/main.cpp
 
 CMakeFiles/ProjectMaker.dir/src/main.cpp.i: cmake_force
@@ -102,18 +116,20 @@ CMakeFiles/ProjectMaker.dir/src/main.cpp.s: cmake_force
 
 # Object files for target ProjectMaker
 ProjectMaker_OBJECTS = \
+"CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o" \
 "CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o" \
 "CMakeFiles/ProjectMaker.dir/src/main.cpp.o"
 
 # External object files for target ProjectMaker
 ProjectMaker_EXTERNAL_OBJECTS =
 
+ProjectMaker: CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o
 ProjectMaker: CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o
 ProjectMaker: CMakeFiles/ProjectMaker.dir/src/main.cpp.o
 ProjectMaker: CMakeFiles/ProjectMaker.dir/build.make
 ProjectMaker: CMakeFiles/ProjectMaker.dir/compiler_depend.ts
 ProjectMaker: CMakeFiles/ProjectMaker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ProjectMaker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/lighht19/Documents/Pigeon-App/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ProjectMaker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ProjectMaker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

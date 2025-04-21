@@ -2,6 +2,7 @@ ProjectMaker: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
+  CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o \
   CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o \
   CMakeFiles/ProjectMaker.dir/src/main.cpp.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libwx_gtk3u_core-3.2.so \
@@ -163,6 +164,8 @@ ProjectMaker: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o:
+
+CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o:
 
 CMakeFiles/ProjectMaker.dir/src/ProjectPigeonFrame.cpp.o:
 

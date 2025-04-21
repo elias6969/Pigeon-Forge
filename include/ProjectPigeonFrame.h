@@ -1,31 +1,31 @@
 #ifndef PROJECTPIGEONFRAME_H
 #define PROJECTPIGEONFRAME_H
 
-#include <wx/wx.h>
-#include <wx/choice.h>
-#include <wx/textctrl.h>
+#include <wx/arrstr.h>
 #include <wx/button.h>
-#include <wx/statbmp.h>
+#include <wx/choice.h>
 #include <wx/filename.h>
+#include <wx/statbmp.h>
+#include <wx/textctrl.h>
+#include <wx/wx.h>
 
-class ProjectWizardFrame : public wxFrame
-{
+class ProjectPigeonFrame : public wxFrame {
 public:
-    explicit ProjectWizardFrame(const wxString& title = "PigeonForge",
-                                const wxPoint& pos   = wxDefaultPosition,
-                                const wxSize&  size  = wxSize(560, 340));
+  explicit ProjectPigeonFrame(const wxString &title = "PigeonForge",
+                              const wxPoint &pos = wxDefaultPosition,
+                              const wxSize &size = wxSize(560, 340));
 
 private:
-    /* widgets */
-    wxChoice*   projectTypeChoice {nullptr};
-    wxTextCtrl* projectNameCtrl   {nullptr};
-    wxTextCtrl* projectPathCtrl   {nullptr};
+  wxChoice *ProjectLanguageChoice{nullptr};
+  wxChoice *projectTypeChoice{nullptr};
+  wxTextCtrl *projectNameCtrl{nullptr};
+  wxTextCtrl *projectPathCtrl{nullptr};
 
-    /* events */
-    void OnBrowse  (wxCommandEvent&);
-    void OnGenerate(wxCommandEvent&);
+  void OnBrowse(wxCommandEvent &);
+  void OnGenerate(wxCommandEvent &);
+  void OnLanguageChange(wxCommandEvent &);
 
-    wxDECLARE_EVENT_TABLE();
+  wxDECLARE_EVENT_TABLE();
 };
 
 #endif

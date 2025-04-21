@@ -9,7 +9,8 @@ public:
 wxIMPLEMENT_APP(MyApp);
 
 bool MyApp::OnInit() {
-    ProjectWizardFrame* frame = new ProjectWizardFrame("Project Maker");
+    // Create and show the window
+    ProjectPigeonFrame* frame = new ProjectPigeonFrame("Pigeon Forge");
     frame->Show(true);
-    return true;
+    return true; 
 }

@@ -129,6 +129,30 @@ ProjectMaker/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectMaker.dir/build.make CMakeFiles/ProjectMaker.dir/build
 .PHONY : ProjectMaker/fast
 
+src/PathManager.o: src/PathManager.cpp.o
+.PHONY : src/PathManager.o
+
+# target to build an object file
+src/PathManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectMaker.dir/build.make CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.o
+.PHONY : src/PathManager.cpp.o
+
+src/PathManager.i: src/PathManager.cpp.i
+.PHONY : src/PathManager.i
+
+# target to preprocess a source file
+src/PathManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectMaker.dir/build.make CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.i
+.PHONY : src/PathManager.cpp.i
+
+src/PathManager.s: src/PathManager.cpp.s
+.PHONY : src/PathManager.s
+
+# target to generate assembly for a file
+src/PathManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ProjectMaker.dir/build.make CMakeFiles/ProjectMaker.dir/src/PathManager.cpp.s
+.PHONY : src/PathManager.cpp.s
+
 src/ProjectPigeonFrame.o: src/ProjectPigeonFrame.cpp.o
 .PHONY : src/ProjectPigeonFrame.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ProjectMaker"
+	@echo "... src/PathManager.o"
+	@echo "... src/PathManager.i"
+	@echo "... src/PathManager.s"
 	@echo "... src/ProjectPigeonFrame.o"
 	@echo "... src/ProjectPigeonFrame.i"
 	@echo "... src/ProjectPigeonFrame.s"
