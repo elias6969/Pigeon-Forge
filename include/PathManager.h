@@ -1,33 +1,31 @@
-#ifndef PATHMANAGER_H
-#define PATHMANAGER_H
-
-#include <filesystem>
+#pragma once
 #include <string>
+#include <filesystem>
 
 namespace fs = std::filesystem;
 
 class VirtualFileSystem {
 public:
-  explicit VirtualFileSystem(const std::string &basePath);
-  std::string getFullPath(const std::string &relativePath) const;
-  std::string readFile(const std::string &relativePath);
+    VirtualFileSystem(const std::string& basePath);
+    fs::path       getFullPath(const fs::path& relativePath) const;
+    std::string    readFile    (const fs::path& relativePath);
 
 private:
-  std::string baseDir;
+    fs::path baseDir;
 };
 
 class PathsManagerCtrl {
 public:
-  VirtualFileSystem vfs;
-  std::string ImagesPath;
-  std::string CPlusplusPath;
-  std::string CSharpPath;
-  std::string WebFramePath;
+    PathsManagerCtrl();
 
-  // Constructor that sets everything up
-  explicit PathsManagerCtrl(const std::string &basePath);
+    fs::path ImagesPath;
+    fs::path CPlusplusPath;
+    fs::path CSharpPath;
+    fs::path WebFramePath;
+
+private:
+    VirtualFileSystem vfs;
 };
 
+// global instance
 extern PathsManagerCtrl GlobalPaths;
-
-#endif

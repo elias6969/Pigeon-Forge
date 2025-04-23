@@ -36,6 +36,7 @@ Makefile
 *.exe
 *.out
 *.app
+*.txt
 
 # Fortran
 *.mod

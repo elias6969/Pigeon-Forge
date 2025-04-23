@@ -30,9 +30,8 @@ wxBEGIN_EVENT_TABLE(ProjectPigeonFrame, wxFrame)
   SetForegroundColour(fg);
 
   // Load icon + logo
-  SetIcon(wxIcon(GlobalPaths.ImagesPath + "/pigeon.ico", wxBITMAP_TYPE_ICO));
-  wxBitmap logoBmp(GlobalPaths.ImagesPath + "/pigeon_64.png",
-                   wxBITMAP_TYPE_PNG);
+  SetIcon(wxIcon((GlobalPaths.ImagesPath / "pigeon.ico").string(), wxBITMAP_TYPE_ICO));
+  wxBitmap logoBmp((GlobalPaths.ImagesPath / "pigeon_64.png").string(), wxBITMAP_TYPE_PNG);
   wxStaticBitmap *logo = new wxStaticBitmap(this, wxID_ANY, logoBmp);
 
   // Title label
@@ -46,7 +45,6 @@ wxBEGIN_EVENT_TABLE(ProjectPigeonFrame, wxFrame)
   ProjectLanguageChoice->Append("C++");
   ProjectLanguageChoice->Append("C#");
   ProjectLanguageChoice->Append("Web");
-  ProjectLanguageChoice->Append("Images");
   ProjectLanguageChoice->SetSelection(0);
   ProjectLanguageChoice->Bind(wxEVT_CHOICE,
                               &ProjectPigeonFrame::OnLanguageChange, this);
@@ -103,12 +101,11 @@ void ProjectPigeonFrame::OnLanguageChange(wxCommandEvent &) {
     projectTypeChoice->Append("C++ / Console");
     projectTypeChoice->Append("C++ / wxWidgets");
     projectTypeChoice->Append("C++ / OpenGL");
+    projectTypeChoice->Append("C++ / Raylib");
   } else if (lang == "C#") {
     projectTypeChoice->Append("C# / .NET Console");
   } else if (lang == "Web") {
     projectTypeChoice->Append("Web / React App");
-  } else if (lang == "Images") {
-    projectTypeChoice->Append("Images / Viewer");
   }
   projectTypeChoice->SetSelection(0);
 }
@@ -143,8 +140,6 @@ void ProjectPigeonFrame::OnGenerate(wxCommandEvent &) {
     folders = {"src", "public"};
   } else if (Language == "C#") {
     folders = {""};
-  } else if (Language == "Images") {
-    folders = {"assets", "output"};
   }
 
   // Create project directories
@@ -157,24 +152,23 @@ void ProjectPigeonFrame::OnGenerate(wxCommandEvent &) {
   fs::path set;
   bool fullTree = false;
 
-  root = GlobalPaths.vfs.getFullPath("");
   if (Language == "C++") {
-    if (Type == "C++ / Console")
-      set = root / "C++_FrameWorks" / "c++_console";
-    else if (Type == "C++ / wxWidgets")
-      set = root / "C++_FrameWorks" / "wxwidgets";
-    else if (Type == "C++ / OpenGL") {
-      set = root / "C++_FrameWorks" / "OpenGL";
+    if (Type == "C++ / Console") {
+      set = GlobalPaths.CPlusplusPath / "c++_console";
+    } else if (Type == "C++ / wxWidgets") {
+      set = GlobalPaths.CPlusplusPath / "wxwidgets";
+    } else if (Type == "C++ / OpenGL") {
+      set = GlobalPaths.CPlusplusPath / "OpenGL";
+      fullTree = true;
+    } else if (Type == "C++ / Raylib") {
+      set = GlobalPaths.CPlusplusPath / "Raylib";
       fullTree = true;
     }
   } else if (Language == "C#") {
-    set = root / "C#_FrameWorks" / "dotnet_console";
+    set = GlobalPaths.CSharpPath;
     fullTree = true;
   } else if (Language == "Web") {
-    set = root / "Web_Frameworks" / "react_template";
-    fullTree = true;
-  } else if (Language == "Images") {
-    set = root / "Images";
+    set = GlobalPaths.WebFramePath;
     fullTree = true;
   } else {
     wxMessageBox("Unknown language selected!", "Error", wxICON_ERROR);
@@ -198,7 +192,6 @@ void ProjectPigeonFrame::OnGenerate(wxCommandEvent &) {
         FileManager::CopyTemplate(set / "index.html",
                                   projDir / "public" / "index.html", vars);
       } else if (Language == "C#") {
-          
       }
     }
 
@@ -208,6 +201,12 @@ void ProjectPigeonFrame::OnGenerate(wxCommandEvent &) {
     if (Language == "Web") {
       std::system("npm init -y");
       std::system("npm install");
+    }
+    if (Language == "C#") {
+      wxString projectName = projectNameCtrl->GetValue();
+      std::string escapedName = "\"" + std::string(projectName.mb_str()) + "\"";
+      std::string command = "dotnet new console -n " + escapedName;
+      std::system(command.c_str());
     }
 
   } catch (const std::exception &ex) {
